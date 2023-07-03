@@ -33,8 +33,7 @@ class DetailActivity : AppCompatActivity() {
                     binding.nameTv.text = data?.data?.name
                     binding.sp.text = data?.data?.species
                     binding.areaTv.text = data?.data?.place
-                    Glide.with(applicationContext).load(data?.data?.image_url).into(binding.animalImg)
-
+                    Glide.with(applicationContext).load(data?.data?.image_url).into(binding.imageView2)
 
                 }else{
                     Log.d("chanho","have response, but not successful")
