@@ -18,7 +18,6 @@ class dialogFragment() : BottomSheetDialogFragment() {
         super.onCreateView(inflater, container, savedInstanceState)
         return inflater.inflate(R.layout.fragment_dialog, container, false)
     }
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         view?.findViewById<Button>(R.id.permitBtn)?.setOnClickListener {
