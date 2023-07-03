@@ -3,7 +3,7 @@ package com.example.homeforpaws
 import com.google.gson.annotations.SerializedName
 
 data class MainAnimalResponse(
-    @SerializedName("result") val result:List<ListResultResponse>
+    @SerializedName("information") val result:List<ListResultResponse>
 )
 
 data class ListResultResponse(

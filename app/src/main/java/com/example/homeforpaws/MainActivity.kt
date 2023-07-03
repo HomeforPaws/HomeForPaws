@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 response: Response<MainAnimalResponse>
             ) {
                 if(response.isSuccessful){
+                    Log.d("chanho","석세스풀")
                     val data:MainAnimalResponse?=response.body()
                     for(result in data!!.result){
                         itemList.add(MainListItem(result.name,result.imageUrl))
