@@ -24,9 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val aniIds=ArrayList<Int>()
         val intent = Intent(this,DetailActivity::class.java)
-        binding.filterView.setOnClickListener{
 
-        }
         val itemList = ArrayList<MainListItem>()
         val mainListAdapter = MainListAdapter(itemList,object:MainListAdapter.OnItemClickListener{
             override fun onItemClick(position: Int, listItem: MainListItem) {

@@ -17,8 +17,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
+        var userId:Int? = null
         val id = intent.getIntExtra("id",1)
         val retAPI = RetrofitClient.getRetrofitService
         retAPI.getAnimal(id).enqueue(object: Callback<DetailResponse>{
@@ -34,7 +33,7 @@ class DetailActivity : AppCompatActivity() {
                     binding.sp.text = data?.data?.species
                     binding.areaTv.text = data?.data?.place
                     Glide.with(applicationContext).load(data?.data?.image_url).into(binding.imageView2)
-
+                    userId = data?.data?.rescue_id
                 }else{
                     Log.d("chanho","have response, but not successful")
                 }
@@ -47,7 +46,10 @@ class DetailActivity : AppCompatActivity() {
 
         })
         findViewById<Button>(R.id.sponBtn).setOnClickListener{
+            var bundle = Bundle()
+            bundle.putInt("id",userId!!)
             val bottomSheet = dialogFragment()
+            bottomSheet.arguments = bundle
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)
         }
     }

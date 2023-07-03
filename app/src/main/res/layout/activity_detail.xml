@@ -6,6 +6,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      app:layout_constraintTop_toTopOf="parent"
+      android:id="@+id/top_view2"
+      app:layout_constraintLeft_toLeftOf="parent"
+      android:background="#261102">
+
+    <Button
+        android:id="@+id/write2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/group_2306"
+        />
+
+    <Button
+        android:id="@+id/my_page2"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/vector"
+        android:backgroundTint="#FFFFFF"
+        app:iconTint="#FFFFFF"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/paw"
+        app:layout_constraintEnd_toStartOf="@+id/my_page2"
+        app:layout_constraintStart_toEndOf="@+id/write2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
   <TextView
       android:id="@+id/nameTv"
       android:layout_width="141dp"
@@ -61,41 +102,39 @@
       android:id="@+id/ag"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
-      android:layout_marginEnd="68dp"
+      android:layout_marginTop="3dp"
       android:text="나이/성별"
-      app:layout_constraintEnd_toStartOf="@+id/areaTv"
-      app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+      android:textSize="10dp"
+      app:layout_constraintTop_toBottomOf="@+id/imageView2"
+      app:layout_constraintLeft_toRightOf="@+id/nameTv"/>
 
   <TextView
       android:id="@+id/sp"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginStart="12dp"
-      android:layout_marginTop="4dp"
+      android:textSize="10dp"
       android:text="종"
       app:layout_constraintStart_toEndOf="@+id/nameTv"
       app:layout_constraintTop_toBottomOf="@+id/ag" />
 
   <TextView
       android:id="@+id/areaTv"
-      android:layout_width="0dp"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="56dp"
+      android:textSize="10dp"
       android:text="구조지역"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+      app:layout_constraintLeft_toRightOf="@+id/nameTv"
+      app:layout_constraintTop_toBottomOf="@+id/sp" />
 
   <ImageView
       android:id="@+id/imageView2"
-      android:layout_width="300dp"
+      android:layout_width="0dp"
       android:layout_height="300dp"
-      android:layout_marginTop="4dp"
+
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.471"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/top_view2"
       tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
