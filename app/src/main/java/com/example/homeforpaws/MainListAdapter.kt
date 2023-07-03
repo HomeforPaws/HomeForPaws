@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class MainListAdapter(val itemList:ArrayList<MainListItem>):RecyclerView.Adapter<MainListAdapter.MainViewHolder>() {
+class MainListAdapter(
+    val itemList:ArrayList<MainListItem>,
+    val clickListener:OnItemClickListener):RecyclerView.Adapter<MainListAdapter.MainViewHolder>() {
     inner class MainViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val name = itemView.findViewById<TextView>(R.id.main_name)
         val img = itemView.findViewById<ImageView>(R.id.main_img_view)
@@ -27,5 +29,11 @@ class MainListAdapter(val itemList:ArrayList<MainListItem>):RecyclerView.Adapter
         val item  = itemList[position]
         holder.name.text = item.name
         Glide.with(holder.itemView.context).load(item.url).into(holder.img)
+        holder.itemView.setOnClickListener {
+            clickListener.onItemClick(position,item)
+        }
+    }
+    interface OnItemClickListener {
+        fun onItemClick(position: Int, listItem: MainListItem)
     }
 }
