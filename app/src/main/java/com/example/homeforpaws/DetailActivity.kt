@@ -3,6 +3,7 @@ package com.example.homeforpaws
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.fragment.app.DialogFragment
 
 class DetailActivity : AppCompatActivity() {
 
@@ -15,4 +16,5 @@ class DetailActivity : AppCompatActivity() {
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)
         }
     }
+
 }

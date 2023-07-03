@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 이름 입력 -->
+
+    <TextView
+        android:id="@+id/infoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="필수 정보"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- 성별 입력 -->
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="*이름"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editTextName7"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="*나이"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editTextName8"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="*성별"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editTextName9"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="*종"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextName10"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="*구조 지역"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editTextText9"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="*계좌번호"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/deinfoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="상세 정보"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:hint=" 자세한 설명을 입력하세요"
+        android:inputType="textMultiLine"
+        android:lines="5" />
+
+    <TextView
+        android:id="@+id/imgTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="이미지 추가"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <!-- 나이 입력 -->
+
+    <!-- 종 입력 -->
+
+    <!-- 구조지역 입력 -->
+
+</LinearLayout>
